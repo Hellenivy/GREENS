@@ -19,6 +19,8 @@ class KioskOwner(models.Model):
     def __str__(self):
         return self.user.get_full_name()
 
+   
+
 
 class Kiosk(models.Model):
     owner = models.ForeignKey(KioskOwner, on_delete=models.CASCADE)

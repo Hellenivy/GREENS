@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+</head>
+<body>
+
+
+   {% for product in product %}
+<div class="shee">
+<img src = "{{product.product_image.url}}" alt="image">
+    <ul>
+        <li><h2>{{ product.title }}</h2> </li>
+        <li>{{product.kiosk.currency}}</li>
+        <li>{{product.selling_price}}</li>
+        <li>{{ product.description }} </li>
+    </ul>
+    {% endfor %}
+    
+</div>
+<style>
+    .shee{
+        display: flex;
+    }
+    ul,li{
+        list-style-type: none;
+    }
+
+</style>
+</body>
+</html>

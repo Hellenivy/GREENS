@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class ShippingProvider(models.Model):
     name = models.CharField(max_length=6)
-    date_joined = models.CharField(max_length=6)
+    date_joined = models.DateTimeField()
     email = models.EmailField()
     transport_mode = models.CharField(max_length=6)
    

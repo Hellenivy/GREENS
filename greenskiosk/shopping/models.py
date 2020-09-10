@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
+from catalogue.models import Product
 
 # Create your models here.
 class Cart(models.Model):
-    products=models.ManyToManyField(User)
+    product=models.ManyToManyField(Product)
     date_created=models.DateTimeField()
-    def _str_(self):
-        return self.products()
+    total_price=models.DecimalField(max_digits=6,decimal_places=2)
+    status=models.CharField(max_length=7)
+
 
 class Payment(models.Model):
     customer = models.ForeignKey(User,on_delete=models.CASCADE)
