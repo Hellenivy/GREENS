@@ -43,8 +43,11 @@ INSTALLED_APPS = [
     'customers',
     'shopping',
     'shipping',
+    'crispy_forms',
+    
     
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,4 +134,5 @@ STATICFILES_DIR=[
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA='/media'
+
 

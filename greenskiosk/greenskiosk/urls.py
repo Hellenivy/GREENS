@@ -29,5 +29,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('catalogue/', include('catalogue.urls')),
+    path('kiosks/',include ('kiosks.urls')),
+    path('', include('catalogue.urls')),
 ]   +static (settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -6,7 +6,7 @@ class ProductSupplier(models.Model):
     email = models.EmailField()
 
 class Product (models.Model):
-    title = models.CharField(max_length=10)
+    title = models.CharField(max_length=15)
     description = models.TextField()
     kiosk = models.CharField(max_length=6)
     supplier_price = models.DecimalField(max_digits=6,decimal_places=2)
